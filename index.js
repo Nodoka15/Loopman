@@ -7,20 +7,63 @@ Correct: Displayed How Much is Correct
 Input: Input from the HTML Input (Uses correctProgress)
  */
 
-/*import { GoogleGenAI } from "@google/genai";
+const theme = document.getElementById("theme");
+//const man = document.getElementById("man");
+const guessed = document.getElementById("guessed");
+const guessedDisplay = document.getElementById("guessed-display");
+const correct = document.getElementById("correct");
+const input = document.getElementById("input");
+const dropbtn = document.getElementById("dropbtn");
+const restartbtn = document.getElementById("restartbtn");
+const dropdown = document.getElementById("dropdown");
+const status = document.getElementById("status");
+const alreadyUsed = document.getElementById("alreadyUsed");
 
-const ai = new GoogleGenAI({});
+async function getNewWord(){
+    document.getElementById("game-container").style.display = "none";
+    document.getElementById("loader-page").style.display = "flex";
 
-async function main() {
-    const response = await ai.models.generateContent({
-        model: "gemini-3-flash-preview",
-        contents: "Explain how AI works in a few words",
-    });
-    console.log(response.text);
+    const response = await fetch("https://www.wordgamedb.com/api/v2/words/random");
+    const data = await response.json();
+
+    document.getElementById("game-container").style.display = "flex";
+    document.getElementById("loader-page").style.display = "none";
+
+    wordChosen = data.word.toUpperCase();
+    themeChosen = data.category[0].toUpperCase() + data.category.substring(1);
+    hintChosen = data.hint;
+
+    //Ignores Spaces if the Word has Spaces
+    if(wordChosen.indexOf(" ") !== -1) {
+        let tempArray = wordChosen.split(" ");
+        let i = 0;
+        while(i < tempArray.length - 1){
+            correctProgress += "_".repeat(tempArray[i].length) + " ";
+            i++;
+        }
+        correctProgress += "_".repeat(tempArray[i].length);
+    }
+    else{
+        correctProgress = "_".repeat(wordChosen.length);
+    }
+    correctArray = wordChosen.split("");
+    correctArray = correctArray.map(item => item === " " ? null : item);
+
+    theme.innerText = themeChosen;
+    renderWord();
 }
 
-await main();
-*/
+function resetGame(){
+    attemptsRemaining = 8;
+    correctProgress = "";
+    alreadyUsed.innerText = "";
+    guessed.innerText = "";
+    guessedDisplay.innerHTML = "";
+    status.innerText = "";
+    input.value = "";
+    document.getElementById("input").disabled = false;
+    getNewWord();
+}
 
 function count(str, char){
     return str.split(char).length - 1;
@@ -51,53 +94,6 @@ function renderGuessed(condition, guess){
     guessedChar.innerText = guess;
     guessedDisplay.appendChild(guessedChar);
 }
-
-const theme = document.getElementById("theme");
-//const man = document.getElementById("man");
-const guessed = document.getElementById("guessed");
-const guessedDisplay = document.getElementById("guessed-display");
-const correct = document.getElementById("correct");
-const input = document.getElementById("input");
-const status = document.getElementById("status");
-const alreadyUsed = document.getElementById("alreadyUsed");
-
-//const testing = document.getElementById("testing");
-
-const themeWords = {
-    "Food" : ["PIZZA", "CARBONARA", "SALMON", "SPAGHETTI", "RIBEYE", "BIRYANI", "RAMEN", "SUSHI", "KEBAB"],
-    "City" : ["BUDAPEST", "WARSAW", "MIAMI", "MELBOURNE", "JAKARTA", "MOSCOW", "LONDON", "PARIS", "LISBON"],
-    "School Subject" : ["PSYCHOLOGY", "STATISTICS", "LITERATURE", "ALGEBRA", "CALCULUS", "PHYSICS", "CHEMISTRY", "BIOLOGY", "GEOGRAPHY"],
-    "Multi-Word Items" : ["MOUSE AND KEYBOARD", "WIFI ROUTER", "CUTTING BOARD", "LED LIGHTS", "COMPACT DISC", "FANTASY BOOK", "RASPBERRY PI", "GAME CONSOLE", "HARD DRIVE"]
-}
-const themeChosen = Object.keys(themeWords)[Math.floor(Math.random() * 4)];
-const wordChosen = themeWords[themeChosen][Math.floor(Math.random() * 9)];
-
-theme.innerText = themeChosen;
-
-let correctProgress = "";
-
-//Ignores Spaces if the Word has Spaces
-if(wordChosen.indexOf(" ") !== -1) {
-    let tempArray = wordChosen.split(" ");
-    let i = 0;
-    while(i < tempArray.length - 1){
-        correctProgress += "_".repeat(tempArray[i].length) + " ";
-        i++;
-    }
-    correctProgress += "_".repeat(tempArray[i].length);
-}
-else{
-    correctProgress = "_".repeat(wordChosen.length);
-}
-let correctArray = wordChosen.split("");
-correctArray = correctArray.map(item => item === " " ? null : item);
-
-let attemptsRemaining = 8;
-
-//man.innerText = attemptsRemaining;
-renderWord();
-
-//testing.innerText = wordChosen;
 
 input.addEventListener("keydown", (e) => {
     if (e.key === "Enter") {
@@ -147,3 +143,32 @@ input.addEventListener("keydown", (e) => {
         }
     }
 })
+
+dropbtn.addEventListener("click", (e) => {
+    if(dropdown.style.display === "none" || dropdown.style.display === ""){
+        dropdown.style.display = "flex";
+    }
+    else{
+        dropdown.style.display = "none";
+    }
+})
+
+document.addEventListener("click", (e) => {
+    if(e.target.id !== "dropbtn" && dropdown.style.display === "flex"){
+        dropdown.style.display = "none";
+    }
+})
+
+restartbtn.addEventListener("click", (e) => {
+    dropdown.style.display = "none";
+    resetGame();
+
+})
+
+let themeChosen;
+let wordChosen;
+let hintChosen;
+let correctArray;
+let correctProgress = "";
+let attemptsRemaining = 8;
+getNewWord();

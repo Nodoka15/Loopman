@@ -2,13 +2,26 @@
 
 * {box-sizing: border-box; margin: 0; padding: 0;}
 
+
 body{
     background: #263A99;
     min-height: 100vh;
     font-family: "Silkscreen", monospace;
-    color: #fff;
+    color: #F0EBE5;
     display: flex;
     justify-content: center;  /* horizontal centering */
+}
+
+#loader-page{
+    display: flex;
+    text-align: center;
+    margin-top: 45vh;
+    font-size: 30px;
+    animation: blink 1s linear infinite;
+}
+
+@keyframes blink {
+    50% {opacity: 0}
 }
 
 #game-container{
@@ -30,6 +43,44 @@ body{
 h1 {
     font-size: 25px;
     color: #F0EBE5;
+}
+
+#setting{
+    position: relative;
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+}
+
+#dropbtn {
+    background: none;
+    border: none;
+    color: #F0EBE5;
+    font-size: 35px;
+    cursor: pointer;
+    padding: 0;
+}
+
+#dropdown {
+    background: none;
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 100;
+}
+
+#restartbtn {
+    background: #2A2829;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    color: #F0EBE5;
+    cursor: pointer;
+    width: 100%;
+    text-align: right;
+    font-size: 15px;
+    font-family: "Silkscreen", monospace;
 }
 
 #game-body{
@@ -55,7 +106,6 @@ h1 {
 .info-section{
     display: flex;
     flex-direction: column;
-    flex: 1 1 0;
     gap: 8px;
 }
 
@@ -176,7 +226,6 @@ h1 {
     .char-box-empty {
         width: 5vh !important;
         height: 5vh !important;
-        font-size: 20px;
     }
 
     .char-box{
