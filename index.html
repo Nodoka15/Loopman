@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Loopman</title>
+    <!-- Add a Favicon Later | CSS Style as well--->
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+  <body id="body">
+    <div id="game-container">
+      <header id="game-header">
+        <h1 id="header">LOOPMAN: IN DEVELOPMENT</h1>
+        <div id="hearts-display">
+          <!-- Add Hearts-->
+        </div>
+      </header>
+
+      <main id="game-body">
+        <div id="hangman-panel">
+          <!--Add Hangman SVG-->
+        </div>
+
+        <div id="info-panel">
+          <div class="info-section">
+            <p class="label">THEME</p>
+            <span id="theme"></span>
+          </div>
+
+          <div class="info-section">
+            <p class="label">WORD</p>
+            <div id="correct"></div>
+          </div>
+
+          <div class="info-section">
+            <p class="label">YOUR GUESS</p>
+            <div id="input-row">
+              <input type="text" id="input" placeholder="?" maxlength="1"/>
+              <p id="alreadyUsed"></p>
+            </div>
+          </div>
+
+          <div class="info-section">
+            <p class="label">GUESSED</p>
+            <div id="guessed-display"></div>
+            <span id="guessed" style="display:none"></span>
+          </div>
+
+          <p id="status"></p>
+        </div>
+      </main>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

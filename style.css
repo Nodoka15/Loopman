@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+
+* {box-sizing: border-box; margin: 0; padding: 0;}
+
+body{
+    background: #263A99;
+    min-height: 100vh;
+    font-family: "Silkscreen", monospace;
+    color: #fff;
+    display: flex;
+    justify-content: center;  /* horizontal centering */
+}
+
+#game-container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    border: 4px solid #97B4DE
+}
+
+#game-header{
+    border-bottom: 4px solid #97B4DE;
+    padding: 30px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    font-size: 25px;
+    color: #F0EBE5;
+}
+
+#game-body{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    flex: 1;
+}
+
+#hangman-panel{
+    border-right: 4px solid #97B4DE;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#info-panel{
+    padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info-section{
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0;
+    gap: 8px;
+}
+
+.label{
+    padding: 15px 0px;
+    font-size: 25px;
+    color: #DCD0BE;
+    letter-spacing: 1px;
+}
+
+#theme{
+    font-size: 30px;
+    color: #F0EBE5;
+}
+
+#correct{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+#input {
+    width: 150px;
+    height: 70px;
+    padding-bottom: 0px;
+    background: #F0EBE5;
+    color: #263A99;
+    border: 2px solid #97B4DE;
+    border-radius: 10px;
+    font-weight: bold;
+    font-family: 'Silkscreen', monospace;
+    font-size: 35px;
+    outline: none;
+    text-align: center;
+}
+
+#alreadyUsed{
+    padding: 8px 0px;
+}
+
+.char-box {
+    width: 70px;
+    height: 80px;
+    border: 3px solid #97B4DE;
+    background: #F0EBE5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    color: #2A2829;
+}
+
+.char-box-empty {
+    width: 70px;
+    height: 80px;
+    border: 3px solid #97B4DE;
+    background: #2A2829;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.word-group{
+    display: flex;
+    gap: 6px;
+    flex-wrap: nowrap;
+    margin-right : 16px;
+}
+
+#guessed-display{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.guessed-correct{
+    width: 25px;
+    height: 35px;
+    border: 2px solid #fff;
+    background: lightgreen;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    color: black;
+}
+
+.guessed-wrong{
+    width: 25px;
+    height: 35px;
+    border: 2px solid #fff;
+    background: lightcoral;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    color: black;
+}
+
+#status{
+    font-size: 20px;
+}
+
+@media (max-width: 600px){
+    #game-body{
+        grid-template-columns: 1fr;
+    }
+    #hangman-panel{
+        border-right: none;
+        border-bottom: 4px solid #97B4DE;
+        min-height: 220px;
+    }
+
+    .word-group{
+        flex-wrap: wrap;
+    }
+
+    .char-box-empty {
+        width: 5vh !important;
+        height: 5vh !important;
+        font-size: 20px;
+    }
+
+    .char-box{
+        width: 5vh !important;
+        height: 5vh !important;
+        font-size: 20px;
+    }
+
+    #game-container{
+        border: none;
+    }
+
+    .info-section{
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .word-group{
+        justify-content: center;
+        align-items: center;
+        margin-right: 0;
+    }
+
+    #header {
+        text-align: center;
+    }
+
+    #status{
+        text-align: center;
+    }
+
+    #alreadyUsed{
+        text-align: center;
+    }
+
+    #input-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
