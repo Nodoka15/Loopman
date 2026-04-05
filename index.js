@@ -13,11 +13,15 @@ const guessed = document.getElementById("guessed");
 const guessedDisplay = document.getElementById("guessed-display");
 const correct = document.getElementById("correct");
 const input = document.getElementById("input");
-const dropbtn = document.getElementById("dropbtn");
+const rulesOverlay = document.getElementById("rules-overlay");
+const infobtn = document.getElementById("infobtn");
+const closerulesbtn = document.getElementById("close-rules-btn");
+const finishedOverlay = document.getElementById("game-finished");
 const restartbtn = document.getElementById("restartbtn");
-const dropdown = document.getElementById("dropdown");
+const closebtn = document.getElementById("closebtn");
 const status = document.getElementById("status");
 const alreadyUsed = document.getElementById("alreadyUsed");
+
 const bodyParts = [
     document.getElementById("mouth"),
     document.getElementById("eyes"),
@@ -76,6 +80,7 @@ function resetGame(){
     for(let i = 0; i < 8; i++){
         bodyParts[i].classList.add("hidden");
     }
+    finishedOverlay.style.display = "none";
     getNewWord();
 }
 
@@ -142,6 +147,7 @@ input.addEventListener("keydown", (e) => {
             if(correctProgress === wordChosen) {
                 status.innerText = "You Win!";
                 document.getElementById("input").disabled = true;
+                finishedOverlay.style.display = "flex";
             }
         }
         else{
@@ -154,32 +160,40 @@ input.addEventListener("keydown", (e) => {
             }
             //Check if ran out of tries
             if(attemptsRemaining === 0){
-                status.innerText = "You Lose :( | The Correct Word is: " + wordChosen;
+                status.innerText = "You Lose :( \nThe Correct Word is: " + wordChosen;
                 document.getElementById("input").disabled = true;
+                finishedOverlay.style.display = "flex";
             }
         }
     }
 })
 
-dropbtn.addEventListener("click", (e) => {
-    if(dropdown.style.display === "none" || dropdown.style.display === ""){
-        dropdown.style.display = "flex";
-    }
-    else{
-        dropdown.style.display = "none";
+rulesOverlay.addEventListener("click", (e) => {
+    if(e.target.id === "rules-overlay"){
+        rulesOverlay.style.display = "none";
     }
 })
 
-document.addEventListener("click", (e) => {
-    if(e.target.id !== "dropbtn" && dropdown.style.display === "flex"){
-        dropdown.style.display = "none";
+infobtn.addEventListener("click", () => {
+    rulesOverlay.style.display = "flex";
+})
+
+closerulesbtn.addEventListener("click", () => {
+    rulesOverlay.style.display = "none";
+})
+
+closebtn.addEventListener("click", () => {
+    finishedOverlay.style.display = "none";
+})
+
+finishedOverlay.addEventListener("click", (e) => {
+    if(e.target.id === "game-finished"){
+        finishedOverlay.style.display = "none";
     }
 })
 
-restartbtn.addEventListener("click", (e) => {
-    dropdown.style.display = "none";
+restartbtn.addEventListener("click", () => {
     resetGame();
-
 })
 
 let themeChosen;

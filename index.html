@@ -15,11 +15,20 @@
 
     <div id="game-container">
       <header id="game-header">
-        <h1 id="header">LOOPMAN: IN DEVELOPMENT</h1>
+        <h1 id="header">LOOPMAN: BETA</h1>
         <div id="setting">
-          <button id="dropbtn">&#9776;</button>
-          <div id="dropdown">
-            <button id="restartbtn">Restart</button>
+          <button id="infobtn">&#9432;</button>
+          <div id="rules-overlay" class="overlay">
+            <div id="rules-modal" class="modal">
+              <h1>How To Play Loopman</h1>
+              <ul>
+                <li>Guess the Hidden Characters One At A Time</li>
+                <li>Type One Character & Hit Enter to Guess</li>
+                <li>You Will Only Have 8 Wrong Attempts</li>
+                <li>Game Over When You See the Hangman + Eyes/Mouth</li>
+              </ul>
+              <button id="close-rules-btn" class="btn">I Understand!</button>
+            </div>
           </div>
         </div>
       </header>
@@ -80,7 +89,15 @@
             <span id="guessed" style="display:none"></span>
           </div>
 
-          <p id="status"></p>
+          <div id="game-finished" class="overlay">
+            <div id="game-finished-modal" class="modal">
+              <h1 id="status"></h1>
+              <div id="finished-buttons">
+                <button id="closebtn" class="btn">Close</button>
+                <button id="restartbtn" class="btn">Play Again</button>
+              </div>
+            </div>
+          </div>
         </div>
       </main>
     </div>

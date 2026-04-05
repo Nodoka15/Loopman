@@ -12,7 +12,7 @@ body{
     font-family: "Silkscreen", monospace;
     color: #F0EBE5;
     display: flex;
-    justify-content: center;  /* horizontal centering */
+    justify-content: center;
 }
 
 #loader-page{
@@ -25,6 +25,31 @@ body{
 
 @keyframes blink {
     50% {opacity: 0}
+}
+
+.overlay {
+    display: none;
+    position: fixed;    /* covers the entire viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);  /* dim background */
+    z-index: 200;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    background: #263A99;
+    border: 3px solid #97B4DE;
+    padding: 40px;
+    max-width: 500px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-family: 'Silkscreen', monospace;
 }
 
 #game-container{
@@ -55,7 +80,7 @@ h1 {
     align-items: center;
 }
 
-#dropbtn {
+#infobtn {
     background: none;
     border: none;
     color: #F0EBE5;
@@ -64,26 +89,25 @@ h1 {
     padding: 0;
 }
 
-#dropdown {
-    background: none;
-    display: none;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    z-index: 100;
+.btn {
+    background: #F0EBE5;
+    border: #97B4DE;
+    color: #2A2829;
+    font-size: 20px;
+    font-family: "Silkscreen", monospace;
+    cursor: pointer;
+    padding: 10px;
 }
 
-#restartbtn {
-    background: #2A2829;
-    border: none;
-    border-radius: 10px;
-    padding: 15px;
-    color: #F0EBE5;
-    cursor: pointer;
-    width: 100%;
-    text-align: right;
-    font-size: 15px;
-    font-family: "Silkscreen", monospace;
+.btn:hover {
+    background: #97B4DE;
+}
+
+#finished-buttons{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    gap: 12px;
 }
 
 #game-body{
@@ -136,7 +160,7 @@ h1 {
 }
 
 .label{
-    padding: 15px 0px;
+    padding: 15px 0;
     font-size: 25px;
     color: #DCD0BE;
     letter-spacing: 1px;
@@ -156,7 +180,7 @@ h1 {
 #input {
     width: 150px;
     height: 70px;
-    padding-bottom: 0px;
+    padding-bottom: 0;
     background: #F0EBE5;
     color: #263A99;
     border: 2px solid #97B4DE;
@@ -169,7 +193,7 @@ h1 {
 }
 
 #alreadyUsed{
-    padding: 8px 0px;
+    padding: 8px 0;
 }
 
 .char-box {
@@ -300,7 +324,7 @@ h1 {
     }
 
     .label{
-        padding: 0px;
+        padding: 0;
         text-align: center;
         font-size: 15px;
     }
