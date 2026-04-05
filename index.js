@@ -8,7 +8,7 @@ Input: Input from the HTML Input (Uses correctProgress)
  */
 
 const theme = document.getElementById("theme");
-//const man = document.getElementById("man");
+const hint = document.getElementById("hint");
 const guessed = document.getElementById("guessed");
 const guessedDisplay = document.getElementById("guessed-display");
 const correct = document.getElementById("correct");
@@ -18,6 +18,16 @@ const restartbtn = document.getElementById("restartbtn");
 const dropdown = document.getElementById("dropdown");
 const status = document.getElementById("status");
 const alreadyUsed = document.getElementById("alreadyUsed");
+const bodyParts = [
+    document.getElementById("mouth"),
+    document.getElementById("eyes"),
+    document.getElementById("right-leg"),
+    document.getElementById("left-leg"),
+    document.getElementById("right-arm"),
+    document.getElementById("left-arm"),
+    document.getElementById("man-body"),
+    document.getElementById("head"),
+]
 
 async function getNewWord(){
     document.getElementById("game-container").style.display = "none";
@@ -61,7 +71,11 @@ function resetGame(){
     guessedDisplay.innerHTML = "";
     status.innerText = "";
     input.value = "";
+    hint.innerText = "";
     document.getElementById("input").disabled = false;
+    for(let i = 0; i < 8; i++){
+        bodyParts[i].classList.add("hidden");
+    }
     getNewWord();
 }
 
@@ -133,9 +147,12 @@ input.addEventListener("keydown", (e) => {
         else{
             //Display wrong attempt
             renderGuessed(false, guess);
-            //Check if ran out of tries
             attemptsRemaining--;
-            //man.innerText = attemptsRemaining;
+            bodyParts[attemptsRemaining].classList.remove("hidden");
+            if(attemptsRemaining === 2){
+                hint.innerText = hintChosen;
+            }
+            //Check if ran out of tries
             if(attemptsRemaining === 0){
                 status.innerText = "You Lose :( | The Correct Word is: " + wordChosen;
                 document.getElementById("input").disabled = true;

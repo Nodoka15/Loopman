@@ -2,6 +2,9 @@
 
 * {box-sizing: border-box; margin: 0; padding: 0;}
 
+.hidden{
+    visibility: hidden;
+}
 
 body{
     background: #263A99;
@@ -89,11 +92,34 @@ h1 {
     flex: 1;
 }
 
-#hangman-panel{
+#hangman-panel {
+    padding: 24px 20px;
     border-right: 4px solid #97B4DE;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#hangman-section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#hangman-svg {
+    width: auto;
+    max-height: 60vh;
+}
+
+#hint-section{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#hint{
+    font-size: 30px;
+    color: #F0EBE5;
 }
 
 #info-panel{
@@ -213,10 +239,18 @@ h1 {
     #game-body{
         grid-template-columns: 1fr;
     }
+
     #hangman-panel{
         border-right: none;
         border-bottom: 4px solid #97B4DE;
-        min-height: 220px;
+        gap: 10px;
+        padding: 15px 15px;
+        height: 30vh;
+    }
+
+    #info-panel{
+        height: 65vh;
+        gap: 10px;
     }
 
     .word-group{
@@ -239,18 +273,15 @@ h1 {
     }
 
     .info-section{
-        justify-content: center !important;
-        align-items: center !important;
+        justify-content: center;
+        align-items: center;
+        gap: 6px;
     }
 
     .word-group{
         justify-content: center;
         align-items: center;
         margin-right: 0;
-    }
-
-    #header {
-        text-align: center;
     }
 
     #status{
@@ -268,6 +299,27 @@ h1 {
         flex-direction: column;
     }
 
+    .label{
+        padding: 0px;
+        text-align: center;
+        font-size: 15px;
+    }
+
+    #hangman-svg {
+        max-height: 20vh;
+    }
+
+    #hint-section{
+        align-items: center;
+    }
+
+    #hint{
+        font-size: 20px;
+    }
+
+    #status{
+        font-size: 15px;
+    }
 }
 
 
