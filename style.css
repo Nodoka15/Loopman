@@ -259,7 +259,7 @@ h1 {
     font-size: 20px;
 }
 
-@media (max-width: 600px){
+@media (max-width: 720px){
     #game-body{
         grid-template-columns: 1fr;
     }
@@ -268,14 +268,24 @@ h1 {
         border-right: none;
         border-bottom: 4px solid #97B4DE;
         gap: 10px;
-        padding: 15px 15px;
-        height: 30vh;
+        padding: 10px 10px;
+        height: 32vh;
+    }
+
+    #hint{
+        text-align: center;
     }
 
     #info-panel{
         height: 65vh;
         gap: 10px;
     }
+
+    .info-section:has(#input)           { order: 0; }
+    .info-section:has(#guessed-display) { order: 1; }
+    .info-section:has(#correct)         { order: 3; }
+    .info-section:has(#theme)           { order: 2; }
+
 
     .word-group{
         flex-wrap: wrap;
@@ -297,9 +307,10 @@ h1 {
     }
 
     .info-section{
-        justify-content: center;
+        flex-direction: row;
+        justify-content: left;
         align-items: center;
-        gap: 6px;
+        gap: 8px;
     }
 
     .word-group{
@@ -325,7 +336,7 @@ h1 {
 
     .label{
         padding: 0;
-        text-align: center;
+        text-align: left;
         font-size: 15px;
     }
 
