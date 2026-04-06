@@ -275,7 +275,7 @@ h1 {
         border-right: none;
         gap: 12px;
         padding: 15px 10px;
-        height: 39vh;
+        min-height: 39vh;
     }
 
     #hint{
@@ -284,8 +284,8 @@ h1 {
 
     #info-panel{
         order: 0;
-        height: 28vh;
-        max-height: 28vh;
+        min-height: 28vh;
+        max-height: none;
         gap: 10px;
     }
 
