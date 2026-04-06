@@ -279,15 +279,14 @@ h1 {
 
     #info-panel{
         order: 0;
-        height: 30vh;
+        height: 29vh;
         gap: 10px;
     }
 
-
-    .info-section:has(#input)           { order: 0; }
-    .info-section:has(#guessed-display) { order: 1; }
-    .info-section:has(#theme)           { order: 2; }
-    .info-section:has(#correct)         { order: 3; }
+    .info-section:has(#theme)           { order: 0; }
+    .info-section:has(#correct)         { order: 1; }
+    .info-section:has(#input)           { order: 2; }
+    .info-section:has(#guessed-display) { order: 3; }
 
     .word-group{
         flex-wrap: wrap;
