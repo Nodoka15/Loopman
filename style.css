@@ -260,17 +260,22 @@ h1 {
 }
 
 @media (max-width: 720px){
+    #game-header{
+        padding: 10px 20px;
+    }
+
     #game-body{
         display: flex;
         flex-direction: column;
+        gap: 15px;
     }
 
     #hangman-panel{
         order: 1;
         border-right: none;
-        gap: 10px;
-        padding: 10px 10px;
-        height: 40vh;
+        gap: 12px;
+        padding: 15px 10px;
+        height: 39vh;
     }
 
     #hint{
@@ -279,7 +284,8 @@ h1 {
 
     #info-panel{
         order: 0;
-        height: 29vh;
+        height: 28vh;
+        max-height: 28vh;
         gap: 10px;
     }
 
@@ -326,6 +332,7 @@ h1 {
 
     #alreadyUsed{
         text-align: center;
+        font-size: 12px;
     }
 
     #input{
@@ -337,6 +344,7 @@ h1 {
         display: flex;
         justify-content: center;
         align-items: center;
+        gap: 3px;
     }
 
     .label{
