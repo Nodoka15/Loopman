@@ -178,7 +178,7 @@ h1 {
 }
 
 #input {
-    width: 150px;
+    width: 500px;
     height: 70px;
     padding-bottom: 0;
     background: #F0EBE5;
@@ -337,6 +337,7 @@ h1 {
 
     #input{
         height: 40px;
+        width: 200px;
         font-size: 20px;
     }
 
