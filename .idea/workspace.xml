@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f16ac4f6-2a1e-4b47-aac1-7acf1aa8ec8f" name="Changes" comment="Prevents Overflow from User Input/Guessed Boxes to the Hangman." />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Nodoka15&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Nodoka15/WebHangman.git&quot;,
+    &quot;accountId&quot;: &quot;5c6a7171-726e-4880-8356-6f5b45a6fe86&quot;
+  }
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="3Bh1sncMV0mVM92Cy9bnPbdPhce" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "JavaScript Debug.index.html.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Node.js.index.js.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "javascript.preferred.runtime.type.id": "node",
+    "junie.onboarding.icon.badge.shown": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-WS-261.24374.125" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f16ac4f6-2a1e-4b47-aac1-7acf1aa8ec8f" name="Changes" comment="" />
+      <created>1774926696211</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1774926696211</updated>
+      <workItem from="1774926697224" duration="4300000" />
+      <workItem from="1774961247647" duration="21785000" />
+      <workItem from="1775086007896" duration="9856000" />
+      <workItem from="1775264383579" duration="40280000" />
+      <workItem from="1775359194948" duration="5248000" />
+      <workItem from="1775447455462" duration="8075000" />
+      <workItem from="1775947618274" duration="4000" />
+      <workItem from="1775948864105" duration="85000" />
+      <workItem from="1779511590343" duration="66000" />
+      <workItem from="1785005114155" duration="1084000" />
+    </task>
+    <task id="LOCAL-00001" summary="Implemented Hangman SVGs">
+      <option name="closed" value="true" />
+      <created>1775359038286</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1775359038286</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Implemented modals for game rules and when finishing the game.">
+      <option name="closed" value="true" />
+      <created>1775362553975</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1775362553975</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Improved viewing of the game for mobile users.">
+      <option name="closed" value="true" />
+      <created>1775449177722</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1775449177722</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Improved viewing of the game for mobile users V2!!!">
+      <option name="closed" value="true" />
+      <created>1775450006260</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1775450006260</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Improved viewing of the game for mobile users V3.">
+      <option name="closed" value="true" />
+      <created>1775450240506</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1775450240506</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Fixed Collision Between Hangman and Guessed Characters Boxes. Improved Mobile User Viewing V4!">
+      <option name="closed" value="true" />
+      <created>1775451242389</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1775451242389</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Prevents Overflow from User Input/Guessed Boxes to the Hangman.">
+      <option name="closed" value="true" />
+      <created>1775451656040</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1775451656040</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Implemented Hangman SVGs" />
+    <MESSAGE value="Implemented modals for game rules and when finishing the game." />
+    <MESSAGE value="Improved viewing of the game for mobile users." />
+    <MESSAGE value="Improved viewing of the game for mobile users V2!!!" />
+    <MESSAGE value="Improved viewing of the game for mobile users V3." />
+    <MESSAGE value="Fixed Collision Between Hangman and Guessed Characters Boxes. Improved Mobile User Viewing V4!" />
+    <MESSAGE value="Prevents Overflow from User Input/Guessed Boxes to the Hangman." />
+    <option name="LAST_COMMIT_MESSAGE" value="Prevents Overflow from User Input/Guessed Boxes to the Hangman." />
+  </component>
+</project>
